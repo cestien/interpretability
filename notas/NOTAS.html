@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="file:////home/cestien/.vscode/extensions/goessner.mdmath-2.7.4/themes/default/style.css">
+
+</head>
+<body class="markdown-body">
+<span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<div  dir="auto" ></div>
+<link href="/home/cestien/memoria/template/nota_template/miestilo.css" rel="stylesheet"></link>
+<p dir="auto"><a href="https://github.com/cestien/diario/blob/main/diario/diario2025.md" target="_blank">Diario</a></p>
+<p dir="auto"><a href="https://github.com/cestien/Apuntes" target="_blank">Apuntes</a></p>
+<h1 dir="auto" id="mechanistic-interpretability-y-sparsed-autoencoders">Mechanistic Interpretability y Sparsed autoencoders</h1>
+<p dir="auto">El objetivo general del área de <em>mechanistic Interpretability</em> es hacer reverse-engineer acerca de cómo una red neuronal implementa computaciones específicas. Una de dichas áreas es la de <em>sparsed autoencoders</em> que se basa en descomponer las activaciones de la red en características (feautures) interpretables.</p>
+<ul dir="auto">
+<li dir="auto">Interpretabilidad es el campo amplio — cualquier método para entender qué hace un modelo. Incluye cosas como analizar qué inputs activan una neurona, visualizaciones de atención, probing classifiers, etc. Es un campo con muchos enfoques, algunos bastante superficiales.</li>
+<li dir="auto">Mecanicista es el adjetivo que especifica cómo se busca esa comprensión: no conformarse con correlaciones observables desde afuera (&quot;esta neurona se activa más con palabras positivas&quot;) sino identificar los mecanismos causales concretos — qué operaciones matemáticas, en qué orden, producen qué resultado. La analogía que usa Chris Olah es la biología: no alcanza con describir que el corazón &quot;bombea sangre&quot;, querés entender las válvulas, los impulsos eléctricos, la mecánica real.
+La ingeniería inversa es la metodología: tomás un modelo ya entrenado (que nadie diseñó explícitamente, surgió del gradient descent) y tratás de reconstruir qué &quot;algoritmo&quot; aprendió. Es análogo a tomar un chip de silicio sin documentación y deducir su funcionamiento midiendo señales.
+Lo que hace interesante y difícil el problema es que nadie diseñó esos algoritmos — emergieron solos del entrenamiento, así que no hay planos que consultar.</li>
+<li dir="auto">La ingeniería inversa es la metodología: tomás un modelo ya entrenado (que nadie diseñó explícitamente, surgió del gradient descent) y tratás de reconstruir qué &quot;algoritmo&quot; aprendió. Es análogo a tomar un chip de silicio sin documentación y deducir su funcionamiento midiendo señales.
+Lo que hace interesante y difícil el problema es que nadie diseñó esos algoritmos — emergieron solos del entrenamiento, así que no hay planos que consultar.</li>
+</ul>
+<h2 dir="auto" id="resúmenes-propios">Resúmenes propios</h2>
+<ul dir="auto">
+<li dir="auto"><a href="/home/cestien/trabajo/zero-res/zrc/interpretability//notas/matrix_estoca.html" target="_blank">Notas de repaso de matemáticas.</a></li>
+<li dir="auto"><a href="/home/cestien/trabajo/zero-res/zrc/early_language_adquisition/notas/NOTAS.html" target="_blank">Early language adquisition</a></li>
+<li dir="auto"><a href="./Toymodels.pdf">Toy models of superposition</a></li>
+</ul>
+<h2 dir="auto" id="papers-principales-y-sitios">Papers principales y sitios</h2>
+<h3 dir="auto" id="papers-de-anthropic-en-interpretability-research">Papers de Anthropic en Interpretability research</h3>
+<ul dir="auto">
+<li dir="auto"><a href="https://distill.pub/2020/circuits/">Thread: Circuits.</a> Viejo thread en distill.</li>
+<li dir="auto"><a href="https://transformer-circuits.pub/">Transformer Circuits Thread.</a>. Nuevo thread en antrhopic.</li>
+</ul>
+<h3 dir="auto" id="sparsed-autoencoders">Sparsed autoencoders</h3>
+<ul dir="auto">
+<li dir="auto"><a href="http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/">Tutorial de Ng de autoencoders</a></li>
+<li dir="auto"><a href="../papers/sae/sparse_coding97.pdf">Sparse Coding with an Overcomplete Basis Set: A Strategy Employed by V1 ?</a></li>
+<li dir="auto"><a href="../papers/sae/sparse_autoencoders.pdf">Sparse autoencoders find highly interpretable features in language models</a></li>
+<li dir="auto"><a href="https://www.alignmentforum.org/posts/z6QQJbtpkEAX3Aojj/interim-research-report-taking-features-out-of-superposition">Taking features out of superposition with sparse autoencoders</a></li>
+<li dir="auto"><a href="../papers/sae/sparse_coding06.pdf">Efficient sparse coding algorithms</a></li>
+<li dir="auto"><a href="../papers/sae/olshausen_field_nature_1996.pdf">Paper de Nature de sparse autoencoders</a></li>
+</ul>
+<h3 dir="auto" id="algunos-sitios-con-simulaciones-y-herramientas-de-simulación">Algunos sitios con simulaciones y herramientas de simulación</h3>
+<ul dir="auto">
+<li dir="auto">
+<p dir="auto"><a href="https://www.3blue1brown.com/">3Blue1Brown.</a> Sitio con videos de varios temas, muy didáctico</p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://colab.research.google.com/github/anthropics/">Notebooks de Anthropic</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://github.com/HoagyC/sparse_coding">Código para Sparse autoencoders</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://github.com/jbloomAus/SAELens">SAELens. Herramienta analizar y entrenar SAEs</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://learn.arena.education/">ARENA.</a>Cursos de ARENA</p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://github.com/TransformerLensOrg/TransformerLens">TransformerLens.</a> A Library for Mechanistic Interpretability of Generative Language Models. <a href="https://transformerlensorg.github.io/TransformerLens/">Documentación.</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://www.youtube.com/@neelnanda2469/playlists?view=1&amp;sort=dd&amp;shelf_id=5">Neel Nanda's Youtube channel</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://www.alignmentforum.org/posts/NfFST5Mio7BCAQHPA/an-extremely-opinionated-annotated-list-of-my-favourite-1">Mech Interp Paper Reading List</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://www.neelnanda.io/top-posts">Blog de Neel Nanda</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://dynalist.io/d/n2ZWtnoYHrU1s4vnFSAQ519J">A Comprehensive Mechanistic Interpretability Explainer &amp; Glossary</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://colab.research.google.com/github/neelnanda-io/TransformerLens/blob/main/demos/Main_Demo.ipynb#scrollTo=V8UioPhv5uW9">Transformer Lens Main Demo Notebook</a></p>
+</li>
+<li dir="auto">
+<p dir="auto"><a href="https://www.alignmentforum.org/posts/jP9KDyMkchuv6tHwm/how-to-become-a-mechanistic-interpretability-researcher">How To Become A Mechanistic Interpretability Researcher</a></p>
+</li>
+</ul>
+<h3 dir="auto" id="interpretabilidad-en-procesamiento-de-habla">Interpretabilidad en procesamiento de habla</h3>
+<ul dir="auto">
+<li dir="auto"><a href="https://interpretingdl.github.io/speech-interpretability-tutorial/">Interpretability Techniques for Speech Models</a>. Tutorial de interspeech 2025</li>
+<li dir="auto"><a href="../papers/sae/sae_audio.pdf">AudioSAE: Towards Understanding of Audio-Processing Models with
+Sparse AutoEncoders</a></li>
+<li dir="auto"><a href="../papers/sae/sae_explic.pdf">Sparse Autoencoders Make Audio Foundation Models More Explainable</a></li>
+<li dir="auto"><a href="../papers/sae/beyond.pdf">Beyond Transcription: Mechanistic Interpretability in ASR</a></li>
+<li dir="auto"><a href="../papers/reviews/sae/sae_audio.pdf">AudioSAE: Towards Understanding of Audio-Processing Models with Sparse AutoEncoders</a></li>
+<li dir="auto"><a href="https://github.com/audiosae/audiosae_demo">Código para AudioSAE</a></li>
+</ul>
+<h2 dir="auto" id="notas-del-paper-toy-models-of-superposition">Notas del paper: Toy Models of Superposition</h2>
+<h3 dir="auto" id="definiciones-previas">Definiciones previas</h3>
+<ul dir="auto">
+<li dir="auto"><strong>Feature</strong>. Una feature es una dirección en el espacio de activaciones que representa un concepto que el modelo considera útil para disminuir su error de predicción. Características:
+<ul dir="auto">
+<li dir="auto">Es una variable latente. El modelo no recibe un concepto, recibe números, tokens o pixeles por ejemplo, pero no &quot;automovil&quot; o &quot;verbo&quot; o &quot;furioso&quot;. Si la entrada es el token perro, podría contener features como &quot;sustantivo&quot; o &quot;sentimiento de sarcasmo&quot;.</li>
+<li dir="auto">En el paper se asume que la entrada física pasó por una capa intermedia que obtuvo las features y para cada entrada física particular (una imagen, un token, etc.) se obtiene  un vector de dimensión <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> donde cada componente es un número entre cero y uno que indica la importancia de cada feature para esa entrada física.</li>
+</ul>
+</li>
+<li dir="auto"><strong>Superposición</strong>. La feature es la unidad de información que el modelo quiere realmente representar. Pero una neurona en sí no representa necesariamente una feature. Podría haber muchas mas features que neuronas en cuyo caso una neurona podría activarse con la ocurrencia de muchas features. Esto es lo que llamamos <em>superposición</em>. Es un concepto geométrico, ocurre cuando se quieren representar features en direcciones que no son ortogonales, o se cuando se tienen mas features que neuronas, es decir cuando la dimensión del espacio de features <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> es mayor que el espacio de activaciones <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span>.</li>
+<li dir="auto"><strong>Interferencia</strong>. Es una consecuencia de la superposición. Ya que las direcciones no ortogonales van a tener proyecciones sobre  las direcciones ortogonales que interferirán con estas.</li>
+<li dir="auto"><strong>Sparsity</strong>
+<ul dir="auto">
+<li dir="auto"><em>Sparsity de una feature</em>. Es un concepto relacionado con la frecuencia de aparición de una feature en los datos de entrada. Una feature es sparse si se activa raramente. Es decir, la mayor parte de las veces en el tiempo vale cero. Por ejemplo, un verbo es una feature que ocurre muy frecuentemente en una oración, en cambio la palabra elefante ocurre en forma muy poco frecuente.</li>
+<li dir="auto"><em>Sparsity de un vector</em>. Es un concepto relacionado con la representación de una feature en el espacio de las activaciones. Un vector es sparse si tiene muchos ceros en sus componentes.</li>
+<li dir="auto">En general el modelo asignará las <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> direcciones que tiene a las features que sean mas frecuentes (menos sparsed) de modo que ocurra interferencia solamente con las features raras (poco frecuentes).</li>
+</ul>
+</li>
+</ul>
+<h3 dir="auto" id="el-modelo">El modelo</h3>
+<ul dir="auto">
+<li dir="auto">El modelo tendrá un espacio de activaciones de dimensión <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> representado por una matriz de vectores columna ortogonal igual a la cantidad de neuronas. La asignación de direcciones a cada feature se realizará de acuerdo a su importancia y a su frecuencia de ocurrencia combinadas, de este modo:
+<ul dir="auto">
+<li dir="auto">Las <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> mejores tendrán direcciones ortogonales por lo que no provocarán interferencia sobre otras direcciones. La matriz <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span> que define el modelo tendrá como columnas dichas direcciones.</li>
+<li dir="auto">Un conjunto de features intermedias que tendrán direcciones oblicuas las cuales por no ser tan frecuentes provocaran interferncia pero en forma ocasional</li>
+<li dir="auto">Un conjunto de features muy sparsed que se les asignará una dirección en el kernel de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span></span></span></span> por lo que no tendrán representación en modelo.</li>
+</ul>
+</li>
+<li dir="auto">Bases privilegiadas. Son las bases canónicas del espacio de las activaciones. Es decir cuando una feature se alinea con alguna de estas direcciones se activará solamente una neurona. El modelo elige las features más frecuentes para alinearlas con direcciones privilegiadas dado que si ocurren simultaneamente se estarían interfirendo entre sí todo el tiempo.</li>
+</ul>
+<h4 dir="auto" id="features-y-direcciones">Features y direcciones</h4>
+<p dir="auto">Una representación con redes neuronales será lineal si las features se corresponden con direcciones en el espacio de activaciones. Cada feature <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> tendrá una dirección correspondiente <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>W</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">W_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>. Solamente el mapeo de features a direcciones es lineal, las feaures que representa son funciones alineales de la entrada</p>
+<p dir="auto">La pregunta: Puede una red neuronal representar aunque sea con ruido mas feautures que neuronas tiene?. Con los modelos lineales parecería que no, solo se podrían almacenar los componentes principales.</p>
+<p dir="auto">Queremos ver si una red neuronal puede proyectar un vector <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">x\in \mathbb{R}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span> en un vector de menor dimensión  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">h\in \mathbb{R}^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span></span></span></span></span></span></span> y recobrarlo.</p>
+<p dir="auto">Tres características de las features:</p>
+<ul dir="auto">
+<li dir="auto">Son sparsed. Es decir su frecuencia de ocurrencia es baja.</li>
+<li dir="auto">Hay más features que neuronas.</li>
+<li dir="auto">Las features varían en importancia.</li>
+</ul>
+<h3 dir="auto" id="la-superposición-como-cambio-de-fase">La superposición como cambio de fase</h3>
+<p dir="auto">Cuando se entrena un modelo pueden ocurrir tres cosas con una feature:</p>
+<ul dir="auto">
+<li dir="auto">Que la feature no sea aprendida</li>
+<li dir="auto">Que sea aprendida y representada en superposición</li>
+<li dir="auto">Que sea aprendida con una dimensión dedicada a ella</li>
+</ul>
+
+</body>
+</html>

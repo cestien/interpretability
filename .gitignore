@@ -1,0 +1,24 @@
+# Ignorar archivos sueltos en la raíz, pero NO las carpetas que queremos
+*
+!.gitignore
+
+# Permitir explícitamente las carpetas y TODO lo que tengan dentro
+!notas/
+!notas/**
+
+!papers/
+!papers/**
+
+!repositorios
+!repositorios/**
+
+
+# Permitir la estructura de simulaciones paso a paso
+!simulaciones/
+simulaciones/*
+
+!simulaciones/scripts/
+!simulaciones/scripts/**
+
+!simulaciones/notebooks/
+!simulaciones/notebooks/**
