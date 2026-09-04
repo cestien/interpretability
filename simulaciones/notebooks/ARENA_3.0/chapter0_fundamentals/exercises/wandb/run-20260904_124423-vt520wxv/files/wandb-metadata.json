@@ -1,0 +1,39 @@
+{
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.11.15",
+  "startedAt": "2026-09-04T15:44:23.991999Z",
+  "program": "/home/cestien/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises/part5_vaes_and_gans/0.5_VAEs_&_GANs_exercises.ipynb",
+  "codePath": "/home/cestien/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises/part5_vaes_and_gans/0.5_VAEs_&_GANs_exercises.ipynb",
+  "git": {
+    "remote": "https://github.com/cestien/interpretability.git",
+    "commit": "634f2f3da9450046e4c902f735cc212d3611c647"
+  },
+  "email": "cestien@fi.uba.ar",
+  "root": "/home/cestien/trabajo/zero-res/zrc/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises",
+  "host": "asus2022",
+  "executable": "/home/cestien/miniconda3/envs/arena-env/bin/python",
+  "cpu_count": 14,
+  "cpu_count_logical": 20,
+  "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1006450962432",
+      "used": "939015892992"
+    }
+  },
+  "memory": {
+    "total": "67066916864"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+      "memoryTotal": "8589934592",
+      "cudaCores": 5888,
+      "architecture": "Ampere",
+      "uuid": "GPU-8fa13ce2-27bc-2d7b-48b5-9b2b0dc6dddb"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "7ggd7qbfeh5ucwtbb581dsfzf07udch7"
+}

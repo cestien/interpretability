@@ -1,0 +1,58 @@
+_wandb:
+    value:
+        cli_version: 0.28.2
+        e:
+            sfemcjlwkcq7q90uwc032e7d5jauq106:
+                codePath: /home/cestien/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises/part5_vaes_and_gans/0.5_VAEs_&_GANs_exercises.ipynb
+                cpu_count: 14
+                cpu_count_logical: 20
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "1006450962432"
+                        used: "939015897088"
+                email: cestien@fi.uba.ar
+                executable: /home/cestien/miniconda3/envs/arena-env/bin/python
+                git:
+                    commit: 634f2f3da9450046e4c902f735cc212d3611c647
+                    remote: https://github.com/cestien/interpretability.git
+                gpu: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 5888
+                      memoryTotal: "8589934592"
+                      name: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+                      uuid: GPU-8fa13ce2-27bc-2d7b-48b5-9b2b0dc6dddb
+                host: asus2022
+                memory:
+                    total: "67066916864"
+                os: Linux-6.8.0-138-generic-x86_64-with-glibc2.39
+                program: /home/cestien/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises/part5_vaes_and_gans/0.5_VAEs_&_GANs_exercises.ipynb
+                python: CPython 3.11.15
+                root: /home/cestien/trabajo/zero-res/zrc/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises
+                startedAt: "2026-09-04T15:47:30.611793Z"
+                writerId: sfemcjlwkcq7q90uwc032e7d5jauq106
+        m: []
+        python_version: 3.11.15
+        t:
+            "1":
+                - 1
+                - 41
+                - 49
+                - 51
+            "2":
+                - 1
+                - 41
+                - 49
+                - 51
+            "3":
+                - 1
+                - 2
+                - 61
+            "4": 3.11.15
+            "5": 0.28.2
+            "8":
+                - 1
+            "12": 0.28.2
+            "13": linux-x86_64

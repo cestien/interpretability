@@ -1,0 +1,23 @@
+2026-09-04 12:47:30,618 INFO    MainThread:24118 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /home/cestien/trabajo/zero-res/zrc/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises/wandb/run-20260904_124730-0zr9n7ji/logs/debug.log
+2026-09-04 12:47:30,618 INFO    MainThread:24118 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /home/cestien/trabajo/zero-res/zrc/interpretability/simulaciones/notebooks/ARENA_3.0/chapter0_fundamentals/exercises/wandb/run-20260904_124730-0zr9n7ji/logs/debug-internal.log
+2026-09-04 12:47:30,618 INFO    MainThread:24118 [wandb_init.py:init():783] calling init triggers
+2026-09-04 12:47:30,618 INFO    MainThread:24118 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2026-09-04 12:47:31,909 INFO    MainThread:24118 [wandb_init.py:init():831] starting backend
+2026-09-04 12:47:31,909 INFO    MainThread:24118 [wandb_init.py:init():846] sending inform_init request
+2026-09-04 12:47:32,715 INFO    MainThread:24118 [wandb_init.py:init():851] backend started and connected
+2026-09-04 12:47:32,719 INFO    MainThread:24118 [wandb_run.py:_label_probe_notebook():1290] probe notebook
+2026-09-04 12:47:32,726 INFO    MainThread:24118 [wandb_init.py:init():921] updated telemetry
+2026-09-04 12:47:32,731 INFO    MainThread:24118 [wandb_init.py:init():944] communicating run to backend with 90.0 second timeout
+2026-09-04 12:47:33,463 INFO    MainThread:24118 [wandb_init.py:init():981] starting run threads in backend
+2026-09-04 12:47:33,530 INFO    MainThread:24118 [wandb_run.py:_console_start():2626] atexit reg
+2026-09-04 12:47:33,530 INFO    MainThread:24118 [wandb_run.py:_redirect():2476] redirect: wrap_raw
+2026-09-04 12:47:33,530 INFO    MainThread:24118 [wandb_run.py:_redirect():2545] Wrapping output streams.
+2026-09-04 12:47:33,530 INFO    MainThread:24118 [wandb_run.py:_redirect():2568] Redirects installed.
+2026-09-04 12:47:33,531 INFO    MainThread:24118 [wandb_init.py:init():1019] run started, returning control to user process
+2026-09-04 12:47:33,531 INFO    MainThread:24118 [wandb_watch.py:_watch():69] Watching
+2026-09-04 12:47:48,716 INFO    MainThread:24118 [wandb_run.py:_finish():2397] finishing run cestien-aiva/day5-vae-mnist/0zr9n7ji
+2026-09-04 12:47:48,716 INFO    MainThread:24118 [wandb_run.py:_atexit_cleanup():2593] got exitcode: 0
+2026-09-04 12:47:48,716 INFO    MainThread:24118 [wandb_run.py:_restore():2575] restore
+2026-09-04 12:47:48,717 INFO    MainThread:24118 [wandb_run.py:_restore():2581] restore done
+2026-09-04 12:47:50,187 INFO    MainThread:24118 [wandb_run.py:_footer_sync_info():4025] logging synced files
