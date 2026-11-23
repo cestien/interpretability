@@ -1156,3 +1156,6 @@
 {"time":"2026-11-23T15:11:05.992918134-03:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":1146,"events_lines":2}
 {"time":"2026-11-23T15:11:06.389923707-03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
 {"time":"2026-11-23T15:11:20.992609418-03:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":1148,"events_lines":2}
+{"time":"2026-11-23T15:11:21.369347071-03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-11-23T15:11:35.993235457-03:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":1150,"events_lines":2}
+{"time":"2026-11-23T15:11:36.309675025-03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}

@@ -85,3 +85,5 @@
 {"time":"2026-11-23T15:10:53.374124884-03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
 {"time":"2026-11-23T15:11:07.999850192-03:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":76,"events_lines":2}
 {"time":"2026-11-23T15:11:08.436495753-03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-11-23T15:11:22.999064801-03:00","level":"INFO","msg":"filestream: sending request","total_files":1,"events_offset":78,"events_lines":2}
+{"time":"2026-11-23T15:11:23.388107703-03:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
